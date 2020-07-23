@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -10,11 +10,13 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 
 import { AppComponent } from './app.component';
+import { WcLoaderComponent } from './wc-loader/wc-loader.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WcLoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,7 @@ import { AppComponent } from './app.component';
     MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, MatGridListModule, MatListModule
   ],
   providers: [],
+  schemas: [NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
