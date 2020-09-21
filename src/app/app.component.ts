@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { INav } from './side-nav/side-nav.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: 'app.component.html',
 })
 export class AppComponent {
-  public navs = ['Options 1', 'Options 1', 'Options 1', 'Options 1'];
+  public navs: INav[] = [
+    { text: 'Home', icon: 'home' },
+    { text: 'Settings', icon: 'settings' },
+    { text: 'Help', icon: 'help' },
+    { text: 'About', icon: 'about' },
+    { text: 'Test', icon: 'test' }
+  ];
 }

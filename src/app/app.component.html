@@ -1,36 +1,24 @@
 <mat-toolbar>
   <button mat-icon-button (click)="drawer.toggle()">
-   <mat-icon>menu</mat-icon>
- </button>
- <span>My App</span>
- <span class="example-spacer"></span>
- <button mat-icon-button>
-   <mat-icon>favorite</mat-icon>
- </button>
- <button mat-icon-button>
-  <mat-icon>share</mat-icon>
-</button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button>
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>share</mat-icon>
+  </button>
 </mat-toolbar>
 
-<mat-drawer-container [hasBackdrop]="true">
-  <mat-drawer #drawer mode="side">
-    <mat-drawer-container class="example-container">
-      <mat-selection-list>
-        <mat-list-item *ngFor="let nav of navs">
-          {{nav}}
-        </mat-list-item>
-      </mat-selection-list>
-    </mat-drawer-container>
-  </mat-drawer>
-  <mat-drawer-content>
-    <mat-grid-list cols="2" rowHeight="2:1">
-      <mat-grid-tile>
-        <app-wc-loader name="web-comp-1" src="http://127.0.0.1:5500/dist/web-component/main.252b3302962089ecb128.js"></app-wc-loader>
-      </mat-grid-tile>
-      <mat-grid-tile>2</mat-grid-tile>
-      <mat-grid-tile>3</mat-grid-tile>
-      <mat-grid-tile>4</mat-grid-tile>
-    </mat-grid-list>
-  </mat-drawer-content>
-  
-</mat-drawer-container>
+<mat-sidenav-container>
+  <mat-sidenav #drawer [mode]="'over'" [fixedInViewport]="true"
+    fixedTopGap="64">
+    <app-side-nav [navOptions]="navs"></app-side-nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-main-grid></app-main-grid>
+  </mat-sidenav-content>
+</mat-sidenav-container>

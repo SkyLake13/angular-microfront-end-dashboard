@@ -11,12 +11,16 @@ import { MatListModule } from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { WcLoaderComponent } from './wc-loader/wc-loader.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { MainGridComponent } from './main-grid/main-grid.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    WcLoaderComponent
+    WcLoaderComponent,
+    SideNavComponent,
+    MainGridComponent
   ],
   imports: [
     BrowserModule,
