@@ -14,6 +14,7 @@ import { WcLoaderComponent } from './wc-loader/wc-loader.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { MainGridComponent } from './main-grid/main-grid.component';
 import { AppLoaderComponent } from './app-loader/app-loader.component';
+import { AppWithToolbarComponent } from './app-with-toolbar/app-with-toolbar.component';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { AppLoaderComponent } from './app-loader/app-loader.component';
     AppComponent,
     WcLoaderComponent,
     SideNavComponent,
-    MainGridComponent, AppLoaderComponent
+    MainGridComponent, AppLoaderComponent, AppWithToolbarComponent
   ],
   imports: [
     BrowserModule,
