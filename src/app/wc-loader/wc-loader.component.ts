@@ -5,7 +5,7 @@ import { Component, OnInit, ViewChild, AfterViewInit, Input, ElementRef } from '
   templateUrl: './wc-loader.component.html',
   styleUrls: ['./wc-loader.component.scss']
 })
-export class WcLoaderComponent implements OnInit, AfterViewInit {
+export class WcLoaderComponent implements AfterViewInit {
 
   @Input()
   public name: string;
@@ -15,12 +15,6 @@ export class WcLoaderComponent implements OnInit, AfterViewInit {
 
   @ViewChild('container', {read: ElementRef})
   public container: ElementRef;
-
-  constructor() { }
-
-  public ngOnInit(): void {
-
-  }
 
   public ngAfterViewInit(): void {
     if (this.container) {
@@ -32,5 +26,17 @@ export class WcLoaderComponent implements OnInit, AfterViewInit {
       this.container.nativeElement.appendChild(component);
     }
   }
+
+  public toggleFullscreen(): void {
+    if (this.container) {
+        if (!document.fullscreenElement) {
+            this.container.nativeElement.requestFullscreen().catch(err => {
+              alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+            });
+          } else {
+            document.exitFullscreen();
+          }
+    }
+}
 
 }

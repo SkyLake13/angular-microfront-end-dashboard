@@ -15,14 +15,14 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { MainGridComponent } from './main-grid/main-grid.component';
 import { AppLoaderComponent } from './app-loader/app-loader.component';
 import { AppWithToolbarComponent } from './app-with-toolbar/app-with-toolbar.component';
-
+import { WcWithToolbarComponent } from './wc-with-toolbar/wc-with-toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WcLoaderComponent,
     SideNavComponent,
-    MainGridComponent, AppLoaderComponent, AppWithToolbarComponent
+    MainGridComponent, AppLoaderComponent, AppWithToolbarComponent, WcWithToolbarComponent
   ],
   imports: [
     BrowserModule,
